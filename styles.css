@@ -6,6 +6,8 @@ Variables
 */
 :root {
     --header-height: 300px;
+    --header-main-font-size: 3rem;
+    --header-secondary-font-size: 1rem;
 
     --article-img-width: 40vw;
     --article-text-width: 40vw;
@@ -16,6 +18,8 @@ Variables
 
     --article-3-resume-button-w: 150px;
     --article-3-resume-button-h: 50px;
+
+    --article-4-col-width: 50%;
 }
 
 
@@ -69,11 +73,16 @@ header {
 }
 .header--title {
     margin: 0;
+    font-size: var(--header-main-font-size);
 }
 
 .header--content {
     width: 70%;
     margin: 0 auto;
+
+}
+.header--job {
+    font-size: var(--header-secondary-font-size);
 }
 
 .header--description {
@@ -92,9 +101,11 @@ main {
 article {
     width: 95vw;
     margin: 0 auto;
+    align-items: center;
 }
 .side-pic {
     width: var(--article-img-width);
+    height: var(--article-img-width);
     border-radius: 50%;
     border-color: #004E89;
     border-style: solid;
@@ -128,7 +139,7 @@ article {
 }
 .article-2 .websites a img{
     width: var(--article-2-website-width);
-    aspect-ratio: 1/1;
+    aspect-ratio: 1 / 1;
     border-radius: 50%;
 }
 
@@ -153,6 +164,63 @@ article {
     gap: 30px;
 }
 
+
+/*Article 4 Experience*/
+.all-experience-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    row-gap: 30px;
+    word-wrap: break-word;
+}
+
+.experience-column {
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.left-col {
+    width: 50%;
+    background-color: #2056A3;
+}
+.right-col {
+    width: 50%;
+    background-color: #112B50;
+}
+
+
+/*Article 5 Contact */
+.contact {
+    width: 85vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-info {
+    text-align: left;
+    width: 50%;
+}
+.contact-form {
+    width: 50%;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+}
+form>button {
+    padding: 10px 30px;
+    width: min-content;
+    background-color: #0083FC;
+    border: 2px solid #005fb7;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
 
 /*
 
